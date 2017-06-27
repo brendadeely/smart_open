@@ -439,6 +439,7 @@ class S3OpenRead(object):
         self._open_reader()
 
     def _open_reader(self):
+        print "we're in _open_reader, about to set reader to S3ReadStream"
         self.reader = S3ReadStream(self.read_key)
 
     def __iter__(self):
@@ -453,6 +454,7 @@ class S3OpenRead(object):
         Read a specified number of bytes from the key.
 
         """
+        print "about to read {} bytes from reader".format(size)
         return self.reader.read(size)
 
     def seek(self, offset, whence=0):
