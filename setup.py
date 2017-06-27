@@ -36,8 +36,8 @@ setup(
     maintainer = u'Radim Řehůřek',
     maintainer_email = 'me@radimrehurek.com',
 
-    url = 'https://github.com/piskvorky/smart_open',
-    download_url = 'http://pypi.python.org/pypi/smart_open',
+    url = 'https://github.com/bepress/smart_open',
+    download_url = 'git+git://github.com/bepress/smart_open',
 
     keywords = 'file streaming, s3, hdfs',
 
