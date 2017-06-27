@@ -439,10 +439,7 @@ class S3OpenRead(object):
         self._open_reader()
 
     def _open_reader(self):
-        if is_gzip(self.read_key.name):
-            self.reader = gzipstreamfile.GzipStreamFile(self.read_key)
-        else:
-            self.reader = S3ReadStream(self.read_key)
+        self.reader = S3ReadStream(self.read_key)
 
     def __iter__(self):
         for line in self.reader:
